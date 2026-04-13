@@ -14,7 +14,8 @@ public class Server {
 
     public static void main(String[] args) throws Exception {
 
-        serverSocket = new ServerSocket(5000);
+        int port = Integer.parseInt(System.getenv("PORT"));
+ServerSocket serverSocket = new ServerSocket(port);
         System.out.println("Server running with rooms...");
 
         while (true) {
